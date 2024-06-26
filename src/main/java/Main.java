@@ -3,7 +3,7 @@ public class Main {
     public static void main(String[] arg) {
 
 
-        System.out.println("Отгадаешь загадку "+ "да/нет");
+
 
 
 
@@ -11,12 +11,12 @@ public class Main {
         String scan;
         Scanner scanner = new Scanner(System.in);
         while (true) {
-            System.out.println("Отгадай загадку.Зимой и летом одним цветом.");
+            System.out.println("Otgadai zagadky. Zimoi i letom odnim tsvetom ");
             scan = scanner.nextLine();
-            if (scan.equals("елка")) { System.out.println("правильный ответ.");
+            if (scan.equals("elka")) { System.out.println("Pravelni otvet.");
                 break;
             } else {
-                System.out.println("Неправильный ответ.");
+                System.out.println("Nepravilni otvet.");
 
 
             }
