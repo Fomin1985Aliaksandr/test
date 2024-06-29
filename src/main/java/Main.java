@@ -15,8 +15,8 @@ public class Main {
                 gas.totalAmoutGas = gas.calc;
 
                  water.name = " water";
-                 water.readings = 122222222;
-                 water.tariff = 5;
+                 water.readings = 13;
+                 water.tariff = 51556;
                  water.calc = water.readings* water.tariff;
                  water.totalAmoutWater = water.calc;
 
@@ -39,8 +39,8 @@ public class Main {
                  System.out.println("Summa k oplate za electro v tekuchem mesatse = " + electro.calc + "$");
                  System.out.println("Vsego k oplate bez skidki " + sum.totalAmount(water.calc,+gas.calc, electro.calc)+"$");
 
-            int a = sum.totalAmount(gas.calc, water.calc,electro.calc);
-            if (a<500) {}else {System.out.println("Oplata so skidrkoy  " + a/ sum.skidka+"$"+".Razmer skidki=50%" );}
+            int calcDiscont = sum.totalAmount(gas.calc, water.calc,electro.calc);
+            if (calcDiscont<500) {}else {System.out.println("Oplata so skidrkoy  " + calcDiscont/ sum.skidka+"$"+".Razmer skidki=50%" );}
 
 
 
