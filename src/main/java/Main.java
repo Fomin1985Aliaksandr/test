@@ -2,7 +2,6 @@ public class Main {
 
         public static void main (String[] arg) {
 
-
                  meters electro = new meters();
                  meters gas = new meters();
                  meters water = new meters();
@@ -12,27 +11,23 @@ public class Main {
                 gas.readings = 10;
                 gas.tariff = 2;
                 gas.calc= gas.readings* gas.tariff;
-                gas.totalAmoutGas = gas.calc;
+                gas.AmountGas = gas.calc;
 
                  water.name = " water";
                  water.readings = 13;
                  water.tariff = 51556;
                  water.calc = water.readings* water.tariff;
-                 water.totalAmoutWater = water.calc;
+                 water.AmountWater = water.calc;
 
                 electro.name = "electro";
                 electro.readings= 2;
                 electro.tariff= 3;
                 electro.calc= electro.readings* electro.tariff;
-                electro.totalAmoutElectro = electro.calc;
+                electro.AmountElectro = electro.calc;
 
                  gas.calculation(gas.readings, gas.tariff) ;
                  water.calculation(water.readings, water.tariff);
                  sum.totalAmount(gas.calc, water.calc,electro.calc);
-
-
-
-
 
                  System.out.println("Summa k oplate za gaz v tekuchem mesatse = "+ gas.calc + "$");
                  System.out.println("Summa k oplate za vodu v tekuchem mesatse = " + water.calc + "$");
