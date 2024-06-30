@@ -6,22 +6,25 @@ public class Main {
         Meters gas = new Meters();
         Meters water = new Meters();
         Meters sum   =  new Meters();
+        Meters skidka = new Meters();
+
+
 
         gas.name = "gas";
-        gas.readings = 10;
+        gas.readings = 100;
         gas.tariff = 2;
         gas.calc= gas.readings* gas.tariff;
         gas.AmountGas = gas.calc;
 
         water.name = " water";
-        water.readings = 13;
-        water.tariff = 5;
+        water.readings = 100;
+        water.tariff = 2;
         water.calc = water.readings* water.tariff;
         water.AmountWater = water.calc;
 
         electro.name = "electro";
-        electro.readings= 2;
-        electro.tariff= 3;
+        electro.readings= 100;
+        electro.tariff= 2;
         electro.calc= electro.readings* electro.tariff;
         electro.AmountElectro = electro.calc;
 
@@ -35,8 +38,15 @@ public class Main {
         System.out.println("Summa k oplate za electro v tekuchem mesatse = " + electro.calculation(electro.readings, electro.tariff) + "$");
         System.out.println("Vsego k oplate bez skidki " + sum.totalAmount(water.calc,+gas.calc, electro.calc)+"$");
 
+
+
+        sum.skidka =30;
+        int discont =  sum.totalAmount(gas.calc, water.calc,electro.calc);
+
+
+
         int calcDiscont = sum.totalAmount(gas.calc, water.calc,electro.calc);
-        if (calcDiscont<500) {}else {System.out.println("Oplata so skidrkoy  " + calcDiscont/ sum.skidka+"$"+".Razmer skidki=50%" );}
+        if (calcDiscont<500) {}else {System.out.println("Oplata so skidkoy  " +  (discont-(calcDiscont* sum.skidka/100))   +"$"+".Razmer skidki="+ sum.skidka+"%");}
 
 
 
