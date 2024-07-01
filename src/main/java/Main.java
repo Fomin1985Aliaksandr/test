@@ -11,20 +11,20 @@ public class Main {
 
 
         gas.name = "gas";
-        gas.readings = 100;
-        gas.tariff = 2;
+        gas.readings = 50;
+        gas.tariff = 1;
         gas.calc= gas.readings* gas.tariff;
         gas.AmountGas = gas.calc;
 
         water.name = " water";
         water.readings = 100;
-        water.tariff = 2;
+        water.tariff =2;
         water.calc = water.readings* water.tariff;
         water.AmountWater = water.calc;
 
         electro.name = "electro";
-        electro.readings= 100;
-        electro.tariff= 2;
+        electro.readings= 200;
+        electro.tariff= 3;
         electro.calc= electro.readings* electro.tariff;
         electro.AmountElectro = electro.calc;
 
@@ -40,7 +40,7 @@ public class Main {
 
 
 
-        sum.skidka =30;
+        sum.skidka =40;
         int discont =  sum.totalAmount(gas.calc, water.calc,electro.calc);
 
 
